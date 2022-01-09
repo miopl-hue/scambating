@@ -3,103 +3,85 @@
 {% block content %}
 {% load static %}
 
-<div class="banner flex justify-center bg-teal-500">
-    <div class="flex-auto">
-        <p class="text-4xl font-primary font-semibold text-white text-center">{{ BANK_NAME }}</p>
-    </div>
-</div>
-<div class="bg-black-gradient px-dynamic flex justify-center">
-    <ul class="flex-initial">
-        <li class="inline-block mr-12 py-2"><a class="font-secondary text-white hover:text-gray-400 hover:underline"
-                href="./">Accounts</a></li>
-        <li class="inline-block mr-12 py-2"><a class="font-secondary text-white hover:text-gray-400 hover:underline"
-                href="./transfer">Transfer</a></li>
-        <li class="inline-block mr-12 py-2"><a class="font-secondary text-white hover:text-gray-400 hover:underline"
-                href="#">Contact</a></li>
-        <li class="inline-block py-2"><a class="font-secondary text-white hover:text-gray-400 hover:underline"
-                href="../../">Logout</a></li>
-    </ul>
-</div>
+$header
 
 <!-- TODO fix margins with tailwind -->
 <div class="grid-container">
     <div class="flex">
         <div class="mr-12">
             <div class="w-full font-secondary">
-                <div class="rounded flex bg-teal-500 shadow-xl text-white mb-4">
+                <div class="rounded flex bg-${pcol}-500 shadow-xl text-white mb-4">
                     <div class="w-1/2 mx-12 py-4 text-xl">
                         <a href="./transactions">
                             <i class="far fa-clipboard mr-4"></i>
-                            All transactions
+                            Vos transactions
                         </a>
                     </div>
                     <div class="w-1/2 mx-12 py-4 text-xl">
                         <a href="./transfer">
                             <i class="far fa-money-check-edit-alt mr-4"></i>
-                            Make a transfer
+                            Faire un transfert
                         </a>
                     </div>
                 </div>
-                <div class="rounded flex bg-teal-500 shadow-xl text-white mb-4">
+                <div class="rounded flex bg-${pcol}-500 shadow-xl text-white mb-4">
                     <div class="w-1/2 mx-12 py-4 text-xl">
                         <i class="far fa-user-headset mr-4"></i>
-                        Contact support
+                        Contacter le support
                     </div>
                     <div class="w-1/2 mx-12 py-4 text-xl">
                         <i class="far fa-info-circle mr-4"></i>
-                        Edit or add alerts
+                        Modifier et ajouter des alertes.
                     </div>
                 </div>
-                <div class="rounded flex bg-teal-500 shadow-xl text-white mb-4">
+                <div class="rounded flex bg-${pcol}-500 shadow-xl text-white mb-4">
                     <div class="w-1/2 mx-12 py-4 text-xl">
                         <i class="far fa-phone-laptop mr-4"></i>
-                        Go paperless
+                        Ne plus utiliser de papier
                     </div>
                     <div class="w-1/2 mx-12 py-4 text-xl">
                         <i class="far fa-id-card mr-4"></i>
-                        Edit profile
+                        Modifier mon profil
                     </div>
                 </div>
             </div>
 
             {% for account in accounts %}
-            <div class="bg-teal-100 border-t-4 border-teal-500 shadow-xl my-8">
+            <div class="bg-${pcol}-100 border-t-4 border-${pcol}-500 shadow-xl my-8">
                 <div class="flex">
                     <div class="flex-grow px-8 py-4">
                         <div class="flex items-baseline mb-1">
-                            <p class="mb-4 font-tertiary text-teal-900 text-xl mr-4">
+                            <p class="mb-4 font-tertiary text-${pcol}-900 text-xl mr-4">
                                 {{ account.account_type }}
                             </p>
-                            <p class="text-teal-900 opacity-50 tracking-widest">
+                            <p class="text-${pcol}-900 opacity-50 tracking-widest">
                                 XXXX{{ account.format_account_number }}
                             </p>
                         </div>
-                        <p class="font-bold font-secondary text-4xl text-teal-900 tracking-wider">
+                        <p class="font-bold font-secondary text-4xl text-${pcol}-900 tracking-wider">
                             {{ account.format_amount }}
                         </p>
 
                     </div>
-                    <div class="bg-teal-500 px-8 py-4 text-white font-tertiary">
+                    <div class="bg-${pcol}-500 px-8 py-4 text-white font-tertiary">
                         <a href="./transactions">
                             <div class="flex items-baseline">
                                 <p class="mb-4 flex-grow mr-8">
-                                    View transactions
-                                </p>
+Voir les transactions                                </p>
                                 <i class="far fa-chevron-right"></i>
                             </div>
                         </a>
                         <a href="./transfer">
                             <div class="flex items-baseline">
                                 <p class="mb-4 flex-grow mr-8">
-                                    Make a transfer
-                                </p>
+Réaliser un transfert                                </p>
                                 <i class="far fa-chevron-right"></i>
                             </div>
                         </a>
                         <a href="">
                             <div class="flex items-baseline">
                                 <p class="flex-grow mr-8">
-                                    More actions
+                                    Plus d'actions
                                 </p>
                                 <i class="far fa-chevron-right"></i>
                             </div>
@@ -150,25 +132,25 @@
 
             <div class="flex justify-between">
                 <div class="shadow-lg border p-6 my-6 mr-4 rounded">
-                    <p class="font-semibold text-lg mb-3 font-secondary">What's your credit score?</p>
+                    <p class="font-semibold text-lg mb-3 font-secondary">Quel est votre score de crédit ?</p>
                     <div class="font-tertiary">
-                        <p class="mb-2">Find out what your credit score is right now. It's seriously really
-                            easy.</p>
-                        <p><a href="#" class="link-primary">Learn More</a></p>
+                        <p class="mb-2">Découvrez quel est votre score de crédit en ce moment. C'est vraiment très
+                            facile</p>
+                        <p><a href="#" class="link-primary">En savoir plus</a></p>
                     </div>
                 </div>
                 <div class="shadow-lg border p-6 my-6 mr-4 rounded">
-                    <p class="font-semibold text-lg mb-3 font-secondary">Join AARP Rewards</p>
+                    <p class="font-semibold text-lg mb-3 font-secondary">Rejoindre les réconpenses AARP</p>
                     <div class="font-tertiary">
-                        <p class="mb-2">You could be saving serious coin on everyday purchases.</p>
-                        <p><a href="#" class="link-primary">Learn More</a></p>
+                        <p class="mb-2">Vous pourriez économiser beaucoup d'argent sur vos achats quotidiens.</p>
+                        <p><a href="#" class="link-primary">En savoir plus</a></p>
                     </div>
                 </div>
                 <div class="shadow-lg border p-6 my-6 rounded">
-                    <p class="font-semibold text-lg mb-3 font-secondary">Record Low Interest Rates</p>
+                    <p class="font-semibold text-lg mb-3 font-secondary">Des taux d'intérêt plus bas que jamais !</p>
                     <div class="font-tertiary">
-                        <p class="mb-2">You're already approved. It takes just a moment to open an account.</p>
-                        <p><a href="#" class="link-primary">Learn More</a></p>
+                        <p class="mb-2">Vous êtes déjà approuvé. L'ouverture d'un compte ne prend qu'un instant.</p>
+                        <p><a href="#" class="link-primary">En savoir plus</a></p>
                     </div>
                 </div>
             </div>
@@ -179,11 +161,11 @@
                 <img class="w-full" src="https://source.unsplash.com/1920x1080/?house" alt="house">
 
                 <div class="px-5 py-6">
-                    <p class="font-secondary text-lg font-semibold mb-3">Great Mortgage Rates</p>
+                    <p class="font-secondary text-lg font-semibold mb-3">Taux hypothécaires avantageux</p>
                     <div class="font-tertiary">
-                        <p>Talk to one of our financial officers about locking in a great rate!</p>
+                        <p>Demandez à l'un de nos agents financiers de vous aider à obtenir un taux avantageux !</p>
                         <br>
-                        <p><a href="#" class="link-primary">Learn More</a></p>
+                        <p><a href="#" class="link-primary">En savoir plus</s></s></a></p>
                     </div>
                 </div>
             </div>
@@ -192,11 +174,11 @@
                 <img class="w-full" src="https://source.unsplash.com/1920x1080/?money" alt="house">
 
                 <div class="px-5 py-6">
-                    <p class="font-secondary text-lg font-semibold mb-3">Retire Faster Than Ever</p>
+                    <p class="font-secondary text-lg font-semibold mb-3">Prendre sa retraite plus vite que jamais</p>
                     <div class="font-tertiary">
-                        <p>You could be banking serious coin by following these steps.</p>
+                        <p>Vous pourriez gagner beaucoup d'argent en suivant ces étapes.</p>
                         <br>
-                        <p><a href="#" class="link-primary">Learn More</a></p>
+                        <p><a href="#" class="link-primary">En savoir plus</a></p>
                     </div>
                 </div>
             </div>
@@ -205,11 +187,11 @@
                 <img class="w-full" src="https://source.unsplash.com/1920x1080/?credit+card" alt="house">
 
                 <div class="px-5 py-6">
-                    <p class="font-secondary text-lg font-semibold mb-3">Credit Card Rewards</p>
+                    <p class="font-secondary text-lg font-semibold mb-3">Récompenses des cartes de crédit</p>
                     <div class="font-tertiary">
-                        <p>You're already approved. It takes just a moment to open an acount.</p>
+                        <p>Vous êtes déjà approuvé. L'ouverture d'un compte ne prend qu'un instant.</p>
                         <br>
-                        <p><a href="#" class="link-primary">Learn More</a></p>
+                        <p><a href="#" class="link-primary">En savoir plus</a></p>
                     </div>
                 </div>
             </div>
