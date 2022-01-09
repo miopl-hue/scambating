@@ -9,14 +9,14 @@ $header
 
 <div class="grid-container">
 
-    <p class="font-semibold text-2xl font-secondary">Transaction History</p>
+    <p class="font-semibold text-2xl font-secondary">Historique de transactions</p>
     <table class="table table-auto w-full font-tertiary shadow-xl rounded-lg mb-10">
         <tr>
             <th class="px-8 py-5">Date</th>
-            <th class="px-8 py-5">Account</th>
+            <th class="px-8 py-5">Compte</th>
             <th class="px-8 py-5">Description</th>
             <th class="px-8 py-5">Type</th>
-            <th class="px-8 py-5">Amount</th>
+            <th class="px-8 py-5">Montant</th>
             <th class="px-8 py-5"></th>
         </tr>
         {% for transaction in transactions %}
@@ -30,14 +30,14 @@ $header
             </td>
             <td class="px-8 py-5">
                 <a href="">
-                    <p class="text-red-600 hover:underline">Dispute</p>
+                    <p class="text-red-600 hover:underline">Contestation</p>
                 </a>
             </td>
         </tr>
         {% endfor %}
     </table>
-    <p class="font-tertiary text-sm text-gray-600">We only display the past 30 days of activity in your web portal.
-        Please use the mobile banking app to view your entire transaction history.</p>
+    <p class="font-tertiary text-sm text-gray-600">Nous n'affichons que les 30 derniers jours d'activité dans votre portail web.
+        Veuillez utiliser l'application bancaire mobile pour consulter l'historique complet de vos transactions.</p>
 </div>
 
 {% endblock %}
