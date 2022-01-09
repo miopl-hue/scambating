@@ -57,22 +57,21 @@ def index(request):
         form = LoginForm()
 
     phrases = [
-        "Investing is like a box of chocolates, you never know what you're"
-        " going to get.",
-        "Buying high, so you can sell low.",
-        "Check the dictionary, we're there.",
-        "Trusting your bank should be easy, so that's what you should do.",
-        "Keeping all your eggs in one basket.",
-        "3.33% (repeating of course) return on your investments.",
-        "Inspecting the elements so you don't have to.",
-        "You do it, so we don't have to.",
-        "We put the D in savings.",
-        "No shirt. No shoes. Free checking.",
-        "Don't join a cult. Join our bank.",
-        "Our contracts are water tight, so you don't have to read them.",
-        "Your money is our money.",
-        "Inspiring blind trust in our customers since 1963.",
-        "Online since 1741.",
+        "L'investissement est comme une boîte de chocolats, vous ne savez jamais ce que vous allez recevoir.",
+        "Acheter haut, pour pouvoir vendre bas.",
+        "Consultez le dictionnaire, nous y sommes.",
+        "Faire confiance à sa banque devrait être facile, donc c'est ce que vous devriez faire.",
+        "Garder tous ses œufs dans le même panier.",
+        "3,33% (en répétant bien sûr) de retour sur vos investissements.",
+        "Inspecter les éléments pour que vous n'ayez pas à le faire.",
+        "Vous le faites, donc nous n'avons pas à le faire.",
+        "Nous mettons le D dans l'épargne.",
+        "Pas de chemise. Pas de chaussures. Chèque gratuit.",
+        "Ne rejoignez pas une secte. Rejoignez notre banque.",
+        "Nos contrats sont étanches, donc vous n'avez pas à les lire.",
+        "Votre argent est notre argent.",
+        "Inspirer une confiance aveugle à nos clients depuis 1963.",
+        "En ligne depuis 1741.",
     ]
 
     context = {
