@@ -13,19 +13,19 @@
 <div class="bg-black-gradient px-dynamic">
     <ul class="text-center">
         <li class="inline-block mr-12 py-2"><a class="font-secondary text-white hover:text-gray-400 hover:underline"
-                href="#">Personal</a>
+                href="#">Personel</a>
         </li>
         <li class="inline-block mr-12 py-2"><a class="font-secondary text-white hover:text-gray-400 hover:underline"
-                href="#">Business</a>
+                href="#">Professionel</a>
         </li>
         <li class="inline-block mr-12 py-2"><a class="font-secondary text-white hover:text-gray-400 hover:underline"
-                href="#">Investing</a>
+                href="#">Investir</a>
         </li>
         <li class="inline-block mr-12 py-2"><a class="font-secondary text-white hover:text-gray-400 hover:underline"
                 href="#">Contact</a>
         </li>
         <li class="inline-block py-2"><a class="font-secondary text-white hover:text-gray-400 hover:underline"
-                href="#">About</a>
+                href="#">A Propos</a>
         </li>
     </ul>
 </div>
@@ -33,12 +33,12 @@
 <div class="m-auto">
     <div class="container-fluid flex">
     <div class="text-white ml-dynamic pt-40 flex-auto">
-        <p class="text-3xl font-primary font-semibold mb-1">Welcome to {{ BANK_NAME }}</p>
+        <p class="text-3xl font-primary font-semibold mb-1">Bienvenue à {{ BANK_NAME }}</p>
         <p class="font-secondary text-lg">{{ random_phrase }}</p>
     </div>
     <div class="mr-dynamic">
         <div class="bg-gray-100 rounded-lg p-6 m-10 w-3/4 max-w-md shadow-xl">
-            <p class="font-semibold text-2xl mb-4 font-secondary">Online Banking</p>
+            <p class="font-semibold text-2xl mb-4 font-secondary">Banque en ligne</p>
 
             <form method="post">
                 {% csrf_token %}
@@ -49,8 +49,8 @@
                             <select
                                 class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                                 id="grid-state">
-                                <option>Business</option>
-                                <option>Personal</option>
+                                <option>Personnel</option>
+                                <option>Profesionnel</option>
                             </select>
                             <div
                                 class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -77,12 +77,11 @@
                             <button
                                 class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-6"
                                 type="submit">
-                                Login
+                                Connexion
                             </button>
                             <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
                                 href="#">
-                                Apply Today
-                            </a>
+Nous rejoindre                            </a>
                         </div>
                     </form>
 
