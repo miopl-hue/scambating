@@ -36,7 +36,7 @@ def bank_name():
         "Compagnie",
         "Credit Union",
         "Financière",
-        " Communautaire  ,
+        " Communautaire " ,
         "Réserve",
         "Fonds",
         "Banque",
