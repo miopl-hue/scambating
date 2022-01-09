@@ -1,5 +1,5 @@
 # Dynamic Fake Bank
-
+This version is translate to French
 This is a fake bank created to mess with scammers. It is written with Python and Django. It can randomize itself by running `python build.py -bg` in the command line at the root directory of this project. Type `python build.py --help` in the command line for more information.
 
 As of now, it is not quite ready to actually be used against scammers, as I have not yet implemented a way of generating realistic account information, and there are problems with transferring the fake money (It lets you generate money by transfering from one account to the same account, it has absolutely no limit on the transfer). I will be adding these features shortly.
